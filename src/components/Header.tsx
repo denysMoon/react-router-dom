@@ -7,7 +7,11 @@ export const Header: React.FC = () => {
     <div className="navBar">
       <div className="linksWrapper">
         {ROUTES.map((route) => {
-          return <CustomLink to={route.path}>{route.name}</CustomLink>;
+          return (
+            <CustomLink key={route.path} to={route.path}>
+              {route.name}
+            </CustomLink>
+          );
         })}
       </div>
     </div>

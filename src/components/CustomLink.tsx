@@ -10,7 +10,7 @@ export const CustomLink: React.FC<ICustomLink> = ({
   to,
   ...props
 }) => {
-  const match = useMatch(to);
+  const match = !!useMatch(to);
 
   return (
     <Link className={`links ${match ? "active" : ""}`} to={to} {...props}>

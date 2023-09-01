@@ -4,6 +4,10 @@ export const ROUTES = [
     name: "Home",
   },
   {
+    path: "/blog",
+    name: "Blog",
+  },
+  {
     path: "/about",
     name: "About",
   },
