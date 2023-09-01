@@ -1,16 +1,14 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { ROUTES } from "../constants";
+import { CustomLink } from "./CustomLink";
 
 export const Header: React.FC = () => {
   return (
     <div className="navBar">
       <div className="linksWrapper">
-        <NavLink className="links" to="/">
-          Home
-        </NavLink>
-        <NavLink className="links" to="/about">
-          About
-        </NavLink>
+        {ROUTES.map((route) => {
+          return <CustomLink to={route.path}>{route.name}</CustomLink>;
+        })}
       </div>
     </div>
   );
