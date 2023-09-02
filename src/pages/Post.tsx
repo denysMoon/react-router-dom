@@ -27,7 +27,7 @@ export const Post: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className="contentWrapper">
       <h1>{post.title}</h1>
       <p>{post.body}</p>
       <Button text={"Go back"} />
